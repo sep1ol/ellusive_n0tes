@@ -8,9 +8,8 @@ services:
     container_name: secret-notes
     restart: unless-stopped
     ports:
-      - "9061:9061"
+      - '9061:9061'
     environment:
-      - NODE_ENV=production
+      - NODE_ENV=production # production/development
       - HOST=0.0.0.0
       - PORT=9061
-      - ENCRYPTION_KEY=${ENCRYPTION_KEY:-your-super-secret-encryption-key-min-32-chars-change-this}

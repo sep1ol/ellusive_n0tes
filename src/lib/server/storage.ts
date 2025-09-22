@@ -1,5 +1,7 @@
 import { encrypt, decrypt, hashPassword, verifyPassword } from './crypto';
-import { ENCRYPTION_KEY } from '$env/static/private';
+import { env } from '$env/dynamic/private';
+
+const ENCRYPTION_KEY = env.ENCRYPTION_KEY || process.env.ENCRYPTION_KEY || '';
 
 console.log('[Storage] ENCRYPTION_KEY loaded:', ENCRYPTION_KEY ? 'Yes' : 'No');
 console.log('[Storage] ENCRYPTION_KEY length:', ENCRYPTION_KEY?.length);
