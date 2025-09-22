@@ -24,6 +24,7 @@ A secure, self-destructing note sharing application built with SvelteKit 5.
 ```bash
 # Clone the repository
 git clone git@github.com:sep1ol/secret_n0te.git
+mv secret_n0te secret-notes
 cd secret-notes
 
 # Install dependencies
@@ -37,7 +38,7 @@ cp .env.example .env
 npm run dev
 ```
 
-The app will be available at `http://localhost:5173`
+The app will be available at `http://localhost:9061`
 
 ### Production Deployment
 
@@ -50,7 +51,7 @@ npm run preview
 
 # Or deploy with Docker
 docker build -t secret-notes .
-docker run -p 3000:3000 secret-notes
+docker run -p 9061:9061 secret-notes
 ```
 
 ## 🛠️ Technology Stack
