@@ -57,11 +57,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 This project is open source and available under the [MIT License](LICENSE).
 
-## 🔗 Links
-
-- **Repository**: [github.com/sep1ol/secret_n0te](https://github.com/sep1ol/secret_n0te)
-- **Demo**: [tempnote.iasecurity.cloud](https://tempnote.iasecurity.cloud) _(if deployed)_
-
 ## ⚠️ Disclaimer
 
 This application stores notes in server memory only. A server restart will delete all notes. This is by design for maximum security, but means notes are not persistent across server restarts or crashes.
