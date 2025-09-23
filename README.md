@@ -1,6 +1,6 @@
-# 🔐 Secret Notes
+# 🔐 Ellusive Notes
 
-A secure, self-destructing note sharing application built with SvelteKit 5.
+Built to send private information that gets deleted once it's read by the other person.
 
 ## ✨ Features
 
@@ -11,48 +11,6 @@ A secure, self-destructing note sharing application built with SvelteKit 5.
 - **⏱️ Expiration Times**: Set notes to expire after a specified duration (1 minute to 7 days)
 - **🎨 Modern UI**: Clean, dark-themed interface built with shadcn-svelte
 - **📱 Responsive Design**: Works seamlessly on desktop and mobile devices
-
-## 🚀 Quick Start
-
-### Prerequisites
-
-- Node.js 18+
-- npm or pnpm
-
-### Installation
-
-```bash
-# Clone the repository
-git clone git@github.com:sep1ol/secret_n0te.git
-mv secret_n0te secret-notes
-cd secret-notes
-
-# Install dependencies
-npm install
-
-# Set up environment variables
-cp .env.example .env
-# Edit .env and set your ENCRYPTION_KEY
-
-# Run development server
-npm run dev
-```
-
-The app will be available at `http://localhost:9061`
-
-### Production Deployment
-
-```bash
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
-
-# Or deploy with Docker
-docker build -t secret-notes .
-docker run -p 9061:9061 secret-notes
-```
 
 ## 🛠️ Technology Stack
 
@@ -85,14 +43,6 @@ Environment variables (`.env`):
 ENCRYPTION_KEY=your-super-secret-encryption-key-min-32-chars
 ```
 
-## 📝 API Endpoints
-
-### Server Actions
-
-- `POST /` - Create a new note
-- `POST /note/[id]?/view` - View and destroy a note
-- `POST /note/[id]?/unlock` - Unlock a password-protected note
-
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
@@ -115,7 +65,3 @@ This project is open source and available under the [MIT License](LICENSE).
 ## ⚠️ Disclaimer
 
 This application stores notes in server memory only. A server restart will delete all notes. This is by design for maximum security, but means notes are not persistent across server restarts or crashes.
-
----
-
-Made with ❤️ using SvelteKit and shadcn-svelte
