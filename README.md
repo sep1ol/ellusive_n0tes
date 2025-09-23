@@ -1,6 +1,6 @@
 # 🔐 Ellusive Notes
 
-Built to send private information that gets deleted once it's read by the other person.
+Send private, self-destructing information through a randomly generated URL you can share with others!
 
 ## ✨ Features
 
