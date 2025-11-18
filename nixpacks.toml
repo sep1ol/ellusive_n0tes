@@ -1,12 +1,22 @@
+# Nixpacks configuration for SvelteKit deployment
+# Uses updated nixpkgs snapshot for Node.js 22.13+ compatibility
+
 [phases.setup]
-nixPkgs = ["nodejs_24"]
-nixLibs = []
+nixpkgsArchive = "51ad838b03a05b1de6f9f2a0fffecee64a9788ee"
 
 [phases.install]
 cmds = ["npm ci"]
 
 [phases.build]
-cmds = ["npm run build && npm prune --production"]
+cmds = [
+  "npm run build",
+  "npm prune --production"
+]
 
 [start]
 cmd = "node build"
+
+[variables]
+NODE_ENV = "production"
+HOST = "0.0.0.0"
+PORT = "9061"
