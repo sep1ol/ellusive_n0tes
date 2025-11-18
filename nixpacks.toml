@@ -1,7 +1,6 @@
 [phases.setup]
-nixPkgs = ["nodejs-24_x"]
+nixPkgs = ["nodejs_24"]
 nixLibs = []
-nixOverlays = ["https://github.com/railwayapp/nix-npm-overlay/archive/main.tar.gz"]
 
 [phases.install]
 cmds = ["npm ci"]
