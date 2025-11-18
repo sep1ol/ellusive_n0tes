@@ -1,17 +1,13 @@
 # Nixpacks configuration for SvelteKit deployment
 # Uses updated nixpkgs snapshot for Node.js 22.13+ compatibility
 
-[build]
-builder = "nixpacks"
-
 [phases.setup]
-nixPkgs = ["nodejs"]
+nixpkgsArchive = "51ad838b03a05b1de6f9f2a0fffecee64a9788ee"
 
 [phases.install]
 cmds = ["npm ci"]
 
-[phases.build-dashboard]
-dependsOn = ["install"]
+[phases.build]
 cmds = [
   "npm run build",
   "npm prune --production"
