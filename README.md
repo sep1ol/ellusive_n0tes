@@ -35,12 +35,46 @@ Send private, self-destructing information through a randomly generated URL you 
 - Optional password protection uses scrypt for key derivation
 - HTTPOnly cookies for session management (if implemented)
 
+## 🚀 Deployment
+
+### Option 1: Nixpacks (Recommended for Coolify/Railway/Render)
+
+Zero-config deployment using the included [`nixpacks.toml`](nixpacks.toml):
+
+- ✅ Automatic Node.js 22.13+ detection
+- ✅ Optimized build process
+- ✅ Production-ready configuration
+
+**Deploy to Coolify:**
+1. Push your code to GitHub/GitLab
+2. Create new service in Coolify
+3. Select "Nixpacks" as build pack
+4. Set environment variables (see Configuration below)
+5. Deploy!
+
+### Option 2: Docker Compose (Self-hosted)
+
+Use the included [`docker-compose.yaml`](docker-compose.yaml):
+
+```bash
+cp .env.example .env    # Configure environment
+docker-compose up -d    # Start service
+docker-compose logs -f  # View logs
+```
+
+Features: Dynamic port configuration, health checks, automatic restart
+
+---
+
 ## 🔧 Configuration
 
-Environment variables (`.env`):
+Required environment variables (`.env`):
 
 ```env
 ENCRYPTION_KEY=your-super-secret-encryption-key-min-32-chars
+NODE_ENV=production  # optional, defaults shown
+HOST=0.0.0.0        # optional
+PORT=9061           # optional
 ```
 
 ## 🤝 Contributing
